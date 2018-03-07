@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tct-Pr-uAU">
+                                <rect key="frame" x="197.5" y="583" width="157.5" height="44"/>
+                                <color key="backgroundColor" red="0.3562698809" green="0.47058681810000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="A2e-AI-zcj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="停止扫描">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <!-- <action selector="didClickSacnDeviceBU:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Ac-71-wQw"/> -->
+                                    <action selector="didClickStopScanBU:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z05-vk-jbX"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SE9-hN-unU">
+                                <rect key="frame" x="20" y="40" width="335" height="493"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mP9-VW-Kl6"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYL-7n-GP8">
+                                <rect key="frame" x="20" y="583" width="157.5" height="44"/>
+                                <color key="backgroundColor" red="0.3562698809" green="0.47058681810000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="vnN-z6-mBX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="监听绑定设备的信息">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickLissonAsyncInfoBU:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qlh-9t-EBw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tct-Pr-uAU" firstAttribute="top" secondItem="SE9-hN-unU" secondAttribute="bottom" constant="50" id="2H0-WO-74h"/>
+                            <constraint firstAttribute="trailing" secondItem="SE9-hN-unU" secondAttribute="trailing" constant="20" id="5fw-Cz-Gas"/>
+                            <constraint firstItem="Tct-Pr-uAU" firstAttribute="width" secondItem="GYL-7n-GP8" secondAttribute="width" id="HVy-os-Kwe"/>
+                            <constraint firstItem="GYL-7n-GP8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Tr0-a4-Xqk"/>
+                            <constraint firstItem="SE9-hN-unU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Xxr-4N-chM"/>
+                            <constraint firstItem="SE9-hN-unU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="cK7-M5-QwZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GYL-7n-GP8" secondAttribute="bottom" constant="40" id="j2o-VT-vKc"/>
+                            <constraint firstItem="Tct-Pr-uAU" firstAttribute="leading" secondItem="GYL-7n-GP8" secondAttribute="trailing" constant="20" id="jzx-Le-JF8"/>
+                            <constraint firstAttribute="trailing" secondItem="Tct-Pr-uAU" secondAttribute="trailing" constant="20" id="kyH-2D-uq5"/>
+                            <constraint firstItem="Tct-Pr-uAU" firstAttribute="centerY" secondItem="GYL-7n-GP8" secondAttribute="centerY" id="v3T-6j-scw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="SE9-hN-unU" id="GWI-1W-wzI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="-260"/>
+        </scene>
+    </scenes>
+</document>
